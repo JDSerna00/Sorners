@@ -10,8 +10,8 @@ public class Charactermovement : MonoBehaviour
     int velYId;
 
     [SerializeField] private Animator anim;
-    [SerializeField] private Suavitel motionVector;
-
+    [SerializeField] private Suavitel motionVector = new Suavitel(true);
+    
 
 
     public void Move(CallbackContext ctx)
@@ -21,6 +21,11 @@ public class Charactermovement : MonoBehaviour
  
     }
 
+    public void ToggleSprint(CallbackContext ctx)
+    {
+        bool val = ctx.ReadValueAsButton();
+        motionVector.Clamp = !val;
+    }
     
 
     private void Awake()
