@@ -49,8 +49,9 @@ public class Charactermovement : MonoBehaviour
         motionVector.Update();
 
         Vector2 direction = motionVector.CurrentValue;
-        anim.SetFloat(velXId, direction.x);
         anim.SetFloat(velYId, direction.y);
+        anim.SetFloat(velXId, direction.x);
+       
     }
 
 }
