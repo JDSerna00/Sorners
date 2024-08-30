@@ -531,6 +531,49 @@ ModelImporter:
           preInfinity: 3
           postInfinity: 3
           rotationOrder: 4
+      - name: ChargeThreshold
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: -11.13205
+            outSlope: -11.13205
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.110418916
+          - serializedVersion: 3
+            time: 0.11320524
+            value: 0.05
+            inSlope: 0.008125813
+            outSlope: 0.017763557
+            tangentMode: 1
+            weightedMode: 3
+            inWeight: 1
+            outWeight: 1
+          - serializedVersion: 3
+            time: 0.23004694
+            value: 1
+            inSlope: 0.85829425
+            outSlope: 0.021594713
+            tangentMode: 1
+            weightedMode: 3
+            inWeight: 0.3998025
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
       events: []
       transformMask:
       - path: 
