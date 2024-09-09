@@ -309,6 +309,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 666069177}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a071e569c1ad6554cb9080054005525a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 666069180}
   m_SourcePrefab: {fileID: 100100000, guid: a071e569c1ad6554cb9080054005525a, type: 3}
 --- !u!1 &666069175 stripped
 GameObject:
@@ -391,6 +395,21 @@ MonoBehaviour:
   m_DefaultActionMap: Attacks
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &666069180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666069175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3929e85a1d3776d4c956252591d16a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  staminaRegen: 10
+  stamina: 0
 --- !u!4 &1281515912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: a071e569c1ad6554cb9080054005525a,

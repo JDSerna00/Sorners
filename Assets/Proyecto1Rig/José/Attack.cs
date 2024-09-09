@@ -14,8 +14,10 @@ public class Attack : MonoBehaviour
 
     public void LightAttack(InputAction.CallbackContext ctx)
     {
+        if (!gameObject.scene.IsValid()) return;
+        if(!GetComponent<PlayerState>().UpdateStamina(-20)) return;
+        if (AttackActive()) return;
         if (!ctx.ReadValueAsButton()) return;
-        // if (AttackActive()) return;
         animator.SetTrigger("Attack");
         animator.SetBool("HeavyAttack", false);
     }
@@ -23,8 +25,12 @@ public class Attack : MonoBehaviour
     public void HeavyAttack(InputAction.CallbackContext ctx)
     {
         bool clicked = ctx.ReadValueAsButton();
+        if (AttackActive()) return;
+        PlayerState state = GetComponent<PlayerState>();
+        if (state.Stamina<-40) return;
         if (clicked)
         {
+
             animator.SetTrigger("Attack");
             animator.SetBool("HeavyAttack", true);
             animator.SetFloat("Charging", 1);
@@ -32,6 +38,7 @@ public class Attack : MonoBehaviour
         else
         {
             animator.SetFloat("Charging", 0);
+            //state.UpdateStamina(-40);
         }
     }
 

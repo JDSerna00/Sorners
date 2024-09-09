@@ -502,7 +502,7 @@ ModelImporter:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.7887324
+            time: 0.51968944
             value: 1
             inSlope: 0
             outSlope: 0
@@ -511,7 +511,7 @@ ModelImporter:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.8077875
+            time: 0.5387445
             value: 0
             inSlope: -52.479477
             outSlope: 0
@@ -531,7 +531,57 @@ ModelImporter:
           preInfinity: 3
           postInfinity: 3
           rotationOrder: 4
-      events: []
+      - name: ChargeThreshold
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: -7.459261
+            outSlope: -7.459261
+            tangentMode: 0
+            weightedMode: 3
+            inWeight: 0
+            outWeight: 0.10719452
+          - serializedVersion: 3
+            time: 0.14170837
+            value: 0.042510986
+            inSlope: 0.058438998
+            outSlope: 0.058438998
+            tangentMode: 0
+            weightedMode: 3
+            inWeight: 1
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.36132812
+            value: 1
+            inSlope: 0.011914736
+            outSlope: 0.011914736
+            tangentMode: 0
+            weightedMode: 3
+            inWeight: 0.91305673
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 3
+            inWeight: 0.33333334
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
+      events:
+      - time: 0.14453125
+        functionName: UpdateStamina
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: -60
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
