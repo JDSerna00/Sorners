@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3929e85a1d3776d4c956252591d16a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStamina: 100
+  maxStamina: 1000
   staminaRegen: 10
   stamina: 0
 --- !u!4 &1281515912 stripped
