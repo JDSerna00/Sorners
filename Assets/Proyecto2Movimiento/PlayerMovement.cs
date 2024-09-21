@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     int velXId;
     int velYId;
+    private bool jumpDesired;
+    private bool pressingJump;
 
     [SerializeField] Animator animator;
     [SerializeField] VectorDampener vectorDampener = new VectorDampener(true);
@@ -14,6 +16,20 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 dir = ctx.ReadValue<Vector2>();
         vectorDampener.TargetValue = dir;   
+    }
+    public void OnJump(CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            jumpDesired = true;
+            pressingJump = true;
+            animator.SetBool("isJumping", true);
+        }
+        if (ctx.canceled)
+        {
+            pressingJump = false;
+            animator.SetBool("isJumping", false);
+        }
     }
 
     public void ToggleSprint(CallbackContext ctx)
