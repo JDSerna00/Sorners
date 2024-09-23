@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandIKRest : MonoBehaviour
+public class HandIKRestBone : MonoBehaviour
 {
     [SerializeField] private Transform detectionReference;
     [SerializeField] private Transform hand;
