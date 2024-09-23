@@ -69,7 +69,7 @@ AnimatorStateMachine:
     m_Position: {x: 280, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3699528944624665550}
-    m_Position: {x: 280, y: 10, z: 0}
+    m_Position: {x: 290, y: 10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
@@ -112,7 +112,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Motion&Jump
+  m_Name: Motion&Jump Kenny
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: X
@@ -120,19 +120,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Y
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isJumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base
@@ -164,9 +164,9 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 185f007b93c6886479776597b433f4e2,
+    m_Motion: {fileID: -203655887218126122, guid: 5e4560b9c806a9647b61293fd6d38f38,
       type: 3}
-    m_Threshold: 0.10124999
+    m_Threshold: 0.089999996
     m_Position: {x: 0, y: 0.3}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -175,7 +175,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: 0338745b740a2df4794489846d684348,
       type: 3}
-    m_Threshold: 0.20249999
+    m_Threshold: 0.17999999
     m_Position: {x: 0, y: 0.6}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -184,16 +184,34 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: ab037a22fa160be4297cade48f4dc229,
       type: 3}
-    m_Threshold: 0.30374998
+    m_Threshold: 0.26999998
     m_Position: {x: 0, y: 0.9}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 227ee99456098f4499a463db2e517c12,
+      type: 3}
+    m_Threshold: 0.35999998
+    m_Position: {x: 0, y: -0.3}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: XVelocity
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 41658f16749b20f41b678be32e84aaa2,
+      type: 3}
+    m_Threshold: 0.45
+    m_Position: {x: 0, y: -0.7}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: X
+    m_Mirror: 0
+  - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: a4e84521023b0cb4a9f24f1844d141a9,
       type: 3}
-    m_Threshold: 0.40499997
+    m_Threshold: 0.53999996
     m_Position: {x: -0.3, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -202,7 +220,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: 749d5c1e6f18844488e2c41ce6de136c,
       type: 3}
-    m_Threshold: 0.50624996
+    m_Threshold: 0.63
     m_Position: {x: -0.6, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -211,7 +229,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: cfbdcdaa24d57c64ba4423cd83c774d1,
       type: 3}
-    m_Threshold: 0.60749996
+    m_Threshold: 0.71999997
     m_Position: {x: 0.3, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -220,17 +238,8 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: b6fc313ce04dad34c913abf69422f701,
       type: 3}
-    m_Threshold: 0.70874995
-    m_Position: {x: 0.6, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: XVelocity
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 227ee99456098f4499a463db2e517c12,
-      type: 3}
     m_Threshold: 0.80999994
-    m_Position: {x: 0, y: -0.3}
+    m_Position: {x: 0.6, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: XVelocity

@@ -580,8 +580,8 @@ Animator:
   m_GameObject: {fileID: 1359576512}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
-  m_Controller: {fileID: 9100000, guid: 42ef6d6441ced4f4186c52f4c190a029, type: 2}
-  m_CullingMode: 0
+  m_Controller: {fileID: 9100000, guid: 9ccef526b8b7a3d45bd3b10c61896ebe, type: 2}
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -605,8 +605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1359576513}
   vectorDampener:
-    smoothTime: 0
-    clampMagniture: 0
+    smoothTime: 0.7
+    clampMagniture: 0.4
 --- !u!114 &1359576515
 MonoBehaviour:
   m_ObjectHideFlags: 0
