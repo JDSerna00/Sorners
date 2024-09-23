@@ -315,12 +315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474009098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0116659375, y: 0.97865194, z: -0.058005538, w: -0.19682418}
-  m_LocalPosition: {x: 0.864, y: 1.407, z: 1.972}
+  m_LocalRotation: {x: -0.067421, y: 0.028726827, z: -0.0019422856, w: -0.99730915}
+  m_LocalPosition: {x: 0.08955227, y: 1.7556639, z: -3.255343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1359576516}
   m_LocalEulerAnglesHint: {x: 6.784, y: 202.743, z: 0}
 --- !u!114 &474009102
 MonoBehaviour:
@@ -549,7 +549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474009101}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
         type: 3}
@@ -605,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1359576513}
   vectorDampener:
-    smoothTime: 0.7
+    smoothTime: 0.6
     clampMagniture: 0.4
 --- !u!114 &1359576515
 MonoBehaviour:
@@ -686,11 +690,16 @@ MonoBehaviour:
   m_DefaultActionMap: Basic Motion
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!4 &1359576516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f6781d24e21d0b4b96d4271e8644497,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359576511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 474009101}
   - {fileID: 1263262653}
   - {fileID: 1359576511}
   - {fileID: 273899308}
