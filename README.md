@@ -13,5 +13,7 @@ https://github.com/user-attachments/assets/fe42dc25-6be2-42b7-b232-85b9b0284b64
 
 ## Proyecto 2 Movimiento
 ### Lola en movimiento
-![LolaMovementJump](https://github.com/user-attachments/assets/86b0e2fa-1cd5-46be-8191-a0d02b958daa)
+https://github.com/user-attachments/assets/35ac5116-5463-4225-a060-7337a3fb5006
+
+
 
