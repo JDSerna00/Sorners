@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,12 +315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474009098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0116659375, y: 0.97865194, z: -0.058005538, w: -0.19682418}
-  m_LocalPosition: {x: 0.864, y: 1.407, z: 1.972}
+  m_LocalRotation: {x: -0.067421, y: 0.028726827, z: -0.0019422856, w: -0.99730915}
+  m_LocalPosition: {x: 0.08955227, y: 1.7556639, z: -3.255343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1359576516}
   m_LocalEulerAnglesHint: {x: 6.784, y: 202.743, z: 0}
 --- !u!114 &474009102
 MonoBehaviour:
@@ -549,12 +549,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474009101}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359576513}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359576515}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359576514}
   m_SourcePrefab: {fileID: 100100000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
 --- !u!1 &1359576512 stripped
 GameObject:
@@ -572,8 +584,8 @@ Animator:
   m_GameObject: {fileID: 1359576512}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
-  m_Controller: {fileID: 9100000, guid: 72e3fa976917e6f458b4bf5d2ec7f437, type: 2}
-  m_CullingMode: 0
+  m_Controller: {fileID: 9100000, guid: 9ccef526b8b7a3d45bd3b10c61896ebe, type: 2}
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -583,11 +595,111 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1359576514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a03c5b59124a843a8affbe12ea13b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1359576513}
+  vectorDampener:
+    smoothTime: 0.6
+    clampMagniture: 0.4
+--- !u!114 &1359576515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: b78b92579e5a1ae409da9e531230495b,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a2833dfc-01e7-4887-a463-86b24ca34f56
+    m_ActionName: Basic Motion/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: ToggleSprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0d769473-b6eb-4b82-9226-df49bf97e708
+    m_ActionName: Basic Motion/Sprint[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4ccefc78-eb65-4a63-80bb-bc4272812bee
+    m_ActionName: Basic Motion/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Basic Motion
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &1359576516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f6781d24e21d0b4b96d4271e8644497,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359576511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 474009101}
   - {fileID: 1263262653}
   - {fileID: 1359576511}
   - {fileID: 273899308}
