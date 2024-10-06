@@ -39,7 +39,7 @@ public class Ataque : MonoBehaviour
         else
         {
             anim.SetFloat("Charging", 0);
-            //state.UpdateStamina(-40);
+            //  state.UpdateStamina(-40);
         }
     }
 

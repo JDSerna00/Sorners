@@ -567,6 +567,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359576514}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359576517}
   m_SourcePrefab: {fileID: 100100000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
 --- !u!1 &1359576512 stripped
 GameObject:
@@ -638,11 +642,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576517}
+        m_TargetAssemblyTypeName: Ataque, Assembly-CSharp
+        m_MethodName: LightAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: afc8a92d-cfd3-494d-81d1-a333ee03ceca
     m_ActionName: Combat/LightAttack[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576517}
+        m_TargetAssemblyTypeName: Ataque, Assembly-CSharp
+        m_MethodName: HeavyAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f239c95c-0c52-45ff-9caf-f72acd737297
     m_ActionName: Combat/HeavyAttack[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
@@ -656,6 +684,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1359576511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1359576517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
