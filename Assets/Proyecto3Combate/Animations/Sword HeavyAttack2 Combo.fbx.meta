@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d579a840d1dd3cd45a03526f8bd0b5aa
+guid: a2198d5337a55324384310eac36b9eb5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -37,11 +37,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Light Attack 3
+      name: Sword HeavyAttack 2
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -74,7 +74,7 @@ ModelImporter:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.91934675
+            time: 0.8176645
             value: 1
             inSlope: 0
             outSlope: 0
@@ -83,11 +83,11 @@ ModelImporter:
             inWeight: 0
             outWeight: 0
           - serializedVersion: 3
-            time: 0.9211965
+            time: 0.8700151
             value: 0
-            inSlope: -1.6670508
+            inSlope: -19.101984
             outSlope: 0
-            tangentMode: 65
+            tangentMode: 69
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
