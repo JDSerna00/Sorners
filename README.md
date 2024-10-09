@@ -34,3 +34,6 @@ https://github.com/user-attachments/assets/d0eca014-0346-4f32-931a-755d875d10f5
 ![LightAttack Animator](https://github.com/user-attachments/assets/63a331a9-4514-4853-91bb-6cc7b76e99e5)
 
 ![HeavyAttack Animator](https://github.com/user-attachments/assets/477e84ea-c531-40c3-882a-824e510cd384)
+
+### Diagrama de Flujo del Sistema de Ataques
+![Diagrama](https://github.com/user-attachments/assets/daea9682-8863-4349-a2af-406fa5a342bd)
