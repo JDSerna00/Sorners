@@ -27,3 +27,10 @@ https://github.com/user-attachments/assets/11900325-16ac-41bd-addb-c7d57b0d21d7
 ## Proyecto 3 Combate
 ### Kenny's Fighting for his life...
 https://github.com/user-attachments/assets/d0eca014-0346-4f32-931a-755d875d10f5
+
+### Fotos de Animator
+![Animator 1](https://github.com/user-attachments/assets/5e7b6169-b1f9-4c53-810f-0ae448a2c91f)
+
+![LightAttack Animator](https://github.com/user-attachments/assets/63a331a9-4514-4853-91bb-6cc7b76e99e5)
+
+![HeavyAttack Animator](https://github.com/user-attachments/assets/477e84ea-c531-40c3-882a-824e510cd384)
