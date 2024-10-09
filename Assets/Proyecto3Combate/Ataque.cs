@@ -34,11 +34,11 @@ public class Ataque : MonoBehaviour
         {
             anim.SetTrigger("Attack");
             anim.SetBool("HeavyAttack", true);
-            anim.SetFloat("Charging", 1);
+            //anim.SetFloat("Charging", 1);
         }
         else
         {
-            anim.SetFloat("Charging", 0);
+            //anim.SetFloat("Charging", 0);
             //  state.UpdateStamina(-40);
         }
     }
