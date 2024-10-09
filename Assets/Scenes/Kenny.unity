@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,43 +137,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.69999987
+      value: 0.70000017
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6999999
+      value: 0.70000046
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.69999975
+      value: 0.70000035
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.746
+      value: 0.734437
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4139996
+      value: 1.4340128
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.031999987
+      value: -0.11332065
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7055704
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.70858794
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.0076101427
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.003961325
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 96.675
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -459,12 +459,12 @@ ParentConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 0.746, y: 1.4139998, z: -0.031999994}
-  m_RotationAtRest: {x: 90, y: 0, z: 0}
+  m_TranslationAtRest: {x: 0.064, y: 0.109, z: 0.005}
+  m_RotationAtRest: {x: 0, y: 0, z: 96.675064}
   m_TranslationOffsets:
-  - {x: 0.746, y: 0.031999815, z: 1.4139997}
+  - {x: 0.06399998, y: 0.10899997, z: 0.0050001144}
   m_RotationOffsets:
-  - {x: 0, y: -180, z: -180}
+  - {x: 0, y: 0, z: 96.67507}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -474,7 +474,7 @@ ParentConstraint:
   m_Active: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 2106787884}
+  - sourceTransform: {fileID: 2132503135}
     weight: 1
 --- !u!1 &1263262651
 GameObject:
@@ -806,9 +806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2106787884 stripped
+--- !u!4 &2132503135 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -5952101719468758556, guid: 5f6781d24e21d0b4b96d4271e8644497,
+  m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5f6781d24e21d0b4b96d4271e8644497,
     type: 3}
   m_PrefabInstance: {fileID: 1359576511}
   m_PrefabAsset: {fileID: 0}
@@ -818,5 +818,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1263262653}
   - {fileID: 1359576511}
-  - {fileID: 247794924}
   - {fileID: 273899308}
+  - {fileID: 247794924}
