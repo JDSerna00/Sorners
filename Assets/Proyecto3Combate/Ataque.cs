@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ using UnityEngine.InputSystem;
 
 public class Ataque : MonoBehaviour
 {
+
     private Animator anim;
 
     private void Awake()
@@ -23,6 +25,11 @@ public class Ataque : MonoBehaviour
 
     public void LightAttack(InputAction.CallbackContext ctx)
     {
+        if (!this.gameObject.activeInHierarchy) 
+        {
+            return; 
+        }
+        
         if (!anim.GetBool("canAttack")) return;
         bool val = ctx.performed; 
         if(val)
@@ -34,12 +41,17 @@ public class Ataque : MonoBehaviour
 
     public void OnAttackEnding()
     {
-        anim.SetBool("canAttack", true); 
+        anim.SetBool("canAttack", true);
         anim.SetBool("HeavyAttack", false);
     }
 
     public void HeavyAttack(InputAction.CallbackContext ctx)
     {
+        /*if (!this.gameObject.activeInHierarchy)
+        {
+            return;
+        }*/
+
         if (!anim.GetBool("canAttack")) return;
         bool val = ctx.performed;
         if (val)
