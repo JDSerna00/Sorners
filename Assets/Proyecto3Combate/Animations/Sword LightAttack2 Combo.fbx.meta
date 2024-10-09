@@ -103,7 +103,15 @@ ModelImporter:
           preInfinity: 3
           postInfinity: 3
           rotationOrder: 4
-      events: []
+      events:
+      - time: 0.49132997
+        functionName: OnAttackEnding
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
