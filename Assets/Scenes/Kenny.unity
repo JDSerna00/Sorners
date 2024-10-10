@@ -137,43 +137,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.69999987
+      value: 0.70000017
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6999999
+      value: 0.70000046
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.69999975
+      value: 0.70000035
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.746
+      value: 0.734437
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4139996
+      value: 1.4340128
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.031999987
+      value: -0.11332065
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7055704
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.70858794
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.0076101427
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.003961325
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -185,12 +185,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 96.675
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 335ce2c99ffbc964d89b6236231a150f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -459,12 +463,12 @@ ParentConstraint:
   m_Enabled: 1
   serializedVersion: 2
   m_Weight: 1
-  m_TranslationAtRest: {x: 0.746, y: 1.4139998, z: -0.031999994}
-  m_RotationAtRest: {x: 90, y: 0, z: 0}
+  m_TranslationAtRest: {x: 0.064, y: 0.109, z: 0.005}
+  m_RotationAtRest: {x: 0, y: 0, z: 96.675064}
   m_TranslationOffsets:
-  - {x: 0.746, y: 0.031999815, z: 1.4139997}
+  - {x: 0.06399998, y: 0.10899997, z: 0.0050001144}
   m_RotationOffsets:
-  - {x: 0, y: -180, z: -180}
+  - {x: 0, y: 0, z: 96.67507}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -474,7 +478,7 @@ ParentConstraint:
   m_Active: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 2106787884}
+  - sourceTransform: {fileID: 2132503135}
     weight: 1
 --- !u!1 &1263262651
 GameObject:
@@ -783,6 +787,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f239c95c-0c52-45ff-9caf-f72acd737297
     m_ActionName: Combat/HeavyAttack[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 17439836-34aa-4a8f-a249-0392e83e4988
+    m_ActionName: Combat/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: ToggleSprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bd5c22c1-65f6-4cde-ba48-ff848513482f
+    m_ActionName: Combat/Sprint[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359576514}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 87ab4f39-25aa-4f25-80c9-bd0440f01d5d
+    m_ActionName: Combat/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Combat
@@ -806,9 +858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2106787884 stripped
+--- !u!4 &2132503135 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -5952101719468758556, guid: 5f6781d24e21d0b4b96d4271e8644497,
+  m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5f6781d24e21d0b4b96d4271e8644497,
     type: 3}
   m_PrefabInstance: {fileID: 1359576511}
   m_PrefabAsset: {fileID: 0}
@@ -818,5 +870,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1263262653}
   - {fileID: 1359576511}
-  - {fileID: 247794924}
   - {fileID: 273899308}
+  - {fileID: 247794924}
