@@ -28,6 +28,11 @@ https://github.com/user-attachments/assets/11900325-16ac-41bd-addb-c7d57b0d21d7
 ### Kenny's Fighting for his life...
 https://github.com/user-attachments/assets/d0eca014-0346-4f32-931a-755d875d10f5
 
+### Lola Combatiendo contra el semestre (lo pierde)
+https://github.com/user-attachments/assets/8aa0cba3-8d0b-4435-9683-4dbadc39a54b
+
+
+
 ### Fotos de Animator
 ![Animator 1](https://github.com/user-attachments/assets/5e7b6169-b1f9-4c53-810f-0ae448a2c91f)
 
