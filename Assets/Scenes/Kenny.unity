@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -396,8 +396,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474009098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.049711443, y: 0.93670684, z: -0.1487637, w: -0.31301504}
-  m_LocalPosition: {x: 1.4107352, y: 1.7620511, z: 1.6858902}
+  m_LocalRotation: {x: 0.000000025145711, y: -0.000000029802326, z: -0.000000011175872,
+    w: 1}
+  m_LocalPosition: {x: -0.003, y: 1.54, z: -2.029}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -835,6 +836,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 87ab4f39-25aa-4f25-80c9-bd0440f01d5d
     m_ActionName: Combat/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3dd5e135-52bd-487a-9f3a-6e186550252e
+    m_ActionName: Combat/ChangeWeapon[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Combat
