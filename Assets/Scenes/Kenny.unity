@@ -837,7 +837,19 @@ MonoBehaviour:
     m_ActionId: 87ab4f39-25aa-4f25-80c9-bd0440f01d5d
     m_ActionName: Combat/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576517}
+        m_TargetAssemblyTypeName: Ataque, Assembly-CSharp
+        m_MethodName: ChangeWeapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3dd5e135-52bd-487a-9f3a-6e186550252e
     m_ActionName: Combat/ChangeWeapon[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0

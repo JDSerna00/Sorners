@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,12 +23,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator.GetBool("isJumping")) return;
         bool jumping = ctx.performed; 
-        if(jumping == true)
+        if(jumping)
         {
-            animator.SetTrigger("Jump"); 
-            
+            animator.SetTrigger("Jump");
+
         }
- 
     }
 
     public void ToggleSprint(CallbackContext ctx)

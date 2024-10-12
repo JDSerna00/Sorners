@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(Animator))]
 
@@ -10,6 +11,7 @@ public class Ataque : MonoBehaviour
 {
 
     private Animator anim;
+    private int currentWeapon = 0;
 
     private void Awake()
     {
@@ -59,6 +61,14 @@ public class Ataque : MonoBehaviour
             anim.SetTrigger("Attack");
             anim.SetBool("canAttack", false);
             anim.SetBool("HeavyAttack", true); 
+        }
+    }
+
+    public void ChangeWeapon(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            currentWeapon = (currentWeapon + 1) % 2;
         }
     }
 
