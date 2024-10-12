@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae75ea81fdaa29941958db133ee0aec3
+guid: 0e558366092a8854bafa69a948f1f82f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -37,7 +37,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Punch Light 3
+      name: Punch Heavy 1
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
@@ -61,7 +61,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.5988952
+      - time: 0.363002
         functionName: OnAttackEnding
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976,

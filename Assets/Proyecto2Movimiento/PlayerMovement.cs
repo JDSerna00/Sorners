@@ -17,16 +17,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 dir = ctx.ReadValue<Vector2>();
         vectorDampener.TargetValue = dir;
-        animator.SetBool("IsMoving", true); 
+        animator.SetBool("IsMoving", true);
     }
     public void OnJump(CallbackContext ctx)
     {
         if (animator.GetBool("isJumping")) return;
-        bool jumping = ctx.performed; 
-        if(jumping)
+        bool jumping = ctx.performed;
+        if (jumping == true)
         {
             animator.SetTrigger("Jump");
-
         }
     }
 
@@ -47,6 +46,6 @@ public class PlayerMovement : MonoBehaviour
         vectorDampener.Update();
         Vector2 dir = vectorDampener.CurrentValue;
         animator.SetFloat(velXId, dir.x);
-        animator.SetFloat (velYId, dir.y);
+        animator.SetFloat(velYId, dir.y);
     }
 }

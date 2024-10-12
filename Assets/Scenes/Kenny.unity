@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoonSword
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.70000017

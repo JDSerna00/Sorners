@@ -16,8 +16,8 @@ public class Ataque : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        anim.SetBool("canAttack", true); 
-
+        anim.SetBool("canAttack", true);
+        anim.SetInteger("WeaponType", currentWeapon);
     }
 
     /*private bool AttackActive()
@@ -69,6 +69,7 @@ public class Ataque : MonoBehaviour
         if (ctx.performed)
         {
             currentWeapon = (currentWeapon + 1) % 2;
+            anim.SetInteger("WeaponType", currentWeapon);
         }
     }
 
