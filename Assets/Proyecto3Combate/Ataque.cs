@@ -12,7 +12,9 @@ public class Ataque : MonoBehaviour
 
     private Animator anim;
     private int currentWeapon = 0;
-    public GameObject Sword; 
+    public GameObject Sword;
+    public Material swordMaterial; 
+    public float dissolveDuration = 1.0f; 
 
     private void Awake()
     {
@@ -62,13 +64,15 @@ public class Ataque : MonoBehaviour
         {
             if (currentWeapon == 0) // Cambiar de puños a espada
             {
-                anim.SetTrigger("ChangeWeapon"); // Animación de sacar la espada
+                anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 1;
+                StartCoroutine(ActivateDissolveEffect(true));
             }
             else // Cambiar de espada a puños
             {
-                anim.SetTrigger("ChangeWeapon"); // Animación de guardar la espada
+                anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 0;
+                StartCoroutine(ActivateDissolveEffect(false));
             }
 
             anim.SetInteger("WeaponType", currentWeapon);
@@ -90,24 +94,31 @@ public class Ataque : MonoBehaviour
         {
             Sword.SetActive(false);
         }
+
     }
 
-
-    /*public void HeavyAttack(InputAction.CallbackContext ctx)
+    private IEnumerator ActivateDissolveEffect(bool appearing)
     {
-        bool clicked = ctx.ReadValueAsButton();
-        if (AttackActive()) return;
-        if (clicked)
+        float startValue = appearing ? 1.0f : 0.0f;
+        float endValue = appearing ? 0.0f : 1.0f;
+        float elapsedTime = 0.0f;
+
+        while (elapsedTime < dissolveDuration)
         {
-            anim.SetTrigger("Attack");
-            anim.SetBool("HeavyAttack", true);
-            //anim.SetFloat("Charging", 1);
+            elapsedTime += Time.deltaTime;
+            float dissolveValue = Mathf.Lerp(startValue, endValue, elapsedTime / dissolveDuration);
+            swordMaterial.SetFloat("_DissolveAmount", dissolveValue);
+            yield return null;
+        }
+        if (appearing)
+        {
+            Sword.SetActive(true);
         }
         else
         {
-            //anim.SetFloat("Charging", 0);
-            //  state.UpdateStamina(-40);
+            Sword.SetActive(false);
         }
     }
-    */
+
+    
 }

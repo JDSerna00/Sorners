@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 335ce2c99ffbc964d89b6236231a150f, type: 2}
+      objectReference: {fileID: 2100000, guid: 894155dddafe9c045b66937f62d1815c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -880,6 +880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sword: {fileID: 619205924}
+  swordMaterial: {fileID: 2100000, guid: 894155dddafe9c045b66937f62d1815c, type: 2}
+  dissolveDuration: 1
 --- !u!4 &2132503135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5f6781d24e21d0b4b96d4271e8644497,
