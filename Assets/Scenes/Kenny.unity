@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_Name
-      value: MoonSword
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2efb45b9c536e9e4a8cc8d1e3070cc54, type: 3}
       propertyPath: m_IsActive
@@ -879,6 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sword: {fileID: 619205924}
 --- !u!4 &2132503135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5f6781d24e21d0b4b96d4271e8644497,
