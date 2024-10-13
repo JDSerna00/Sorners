@@ -26,11 +26,10 @@ https://github.com/user-attachments/assets/11900325-16ac-41bd-addb-c7d57b0d21d7
 
 ## Proyecto 3 Combate
 ### Kenny's Fighting for his life...
-https://github.com/user-attachments/assets/d0eca014-0346-4f32-931a-755d875d10f5
+https://github.com/user-attachments/assets/07dbf887-1cf5-40d2-9855-b4e2deef7194
 
 ### Lola Combatiendo contra el semestre (lo pierde)
 https://github.com/user-attachments/assets/8aa0cba3-8d0b-4435-9683-4dbadc39a54b
-
 
 
 ### Fotos de Animator
