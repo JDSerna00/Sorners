@@ -453,7 +453,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 3ccedba1a11829a4dad082d35fc1a1f5, type: 2}
+      objectReference: {fileID: 9100000, guid: cdcd328dbb78bcd42a635b335d281262, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -593,6 +593,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 87ab4f39-25aa-4f25-80c9-bd0440f01d5d
     m_ActionName: Combat/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3dd5e135-52bd-487a-9f3a-6e186550252e
+    m_ActionName: Combat/ChangeWeapon[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Combat
@@ -610,6 +614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sword: {fileID: 0}
+  swordMaterial: {fileID: 0}
+  dissolveDuration: 1
 --- !u!114 &666069186
 MonoBehaviour:
   m_ObjectHideFlags: 0
