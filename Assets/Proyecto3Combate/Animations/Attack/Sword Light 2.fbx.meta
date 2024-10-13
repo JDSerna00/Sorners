@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2198d5337a55324384310eac36b9eb5
+guid: f2637462aca7ffd489497b5d0f9369e6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -37,11 +37,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Heavy Attack 2
+      name: Light 2
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 24
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -51,7 +51,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
@@ -61,7 +61,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.49802002
+      - time: 0.55429375
         functionName: OnAttackEnding
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976,

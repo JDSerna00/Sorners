@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,20 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public void Move(CallbackContext ctx)
     {
         Vector2 dir = ctx.ReadValue<Vector2>();
-        vectorDampener.TargetValue = dir;   
+        vectorDampener.TargetValue = dir;
+        animator.SetBool("IsMoving", true);
     }
     public void OnJump(CallbackContext ctx)
     {
-        if (ctx.started)
+        if (animator.GetBool("isJumping")) return;
+        bool jumping = ctx.performed;
+        if (jumping == true)
         {
-            jumpDesired = true;
-            pressingJump = true;
-            animator.SetBool("isJumping", true);
-        }
-        if (ctx.canceled)
-        {
-            pressingJump = false;
-            animator.SetBool("isJumping", false);
+            animator.SetTrigger("Jump");
         }
     }
 
@@ -49,6 +46,6 @@ public class PlayerMovement : MonoBehaviour
         vectorDampener.Update();
         Vector2 dir = vectorDampener.CurrentValue;
         animator.SetFloat(velXId, dir.x);
-        animator.SetFloat (velYId, dir.y);
+        animator.SetFloat(velYId, dir.y);
     }
 }
