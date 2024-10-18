@@ -39,3 +39,4 @@ public class DamageController : MonoBehaviour, IDamageReceiver
 
     public int Faction => 0;
 }
+
