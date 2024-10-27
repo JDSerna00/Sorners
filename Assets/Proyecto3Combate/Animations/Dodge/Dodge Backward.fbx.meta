@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a0f7a9cc7108044babd0debbb20d82b
+guid: 8872788899527ea4a96ca220acb1d669
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -37,7 +37,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dodge
+      name: Dodge Back
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
