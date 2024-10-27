@@ -1166,6 +1166,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359576523}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359576524}
   m_SourcePrefab: {fileID: 100100000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
 --- !u!1 &1359576512 stripped
 GameObject:
@@ -1209,7 +1213,7 @@ MonoBehaviour:
   animator: {fileID: 1359576513}
   vectorDampener:
     smoothTime: 0.6
-    clampMagniture: 0.4
+    clampMagnitude: 0
 --- !u!114 &1359576515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,15 +1337,51 @@ MonoBehaviour:
     m_ActionId: 3dd5e135-52bd-487a-9f3a-6e186550252e
     m_ActionName: Combat/ChangeWeapon[/Keyboard/tab]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576523}
+        m_TargetAssemblyTypeName: InClass.MotionController, Assembly-CSharp
+        m_MethodName: OnDodge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 384a6395-8865-48f1-b2ab-cfbaf45253ed
     m_ActionName: Combat/Dodge[/Keyboard/alt]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576517}
+        m_TargetAssemblyTypeName: Ataque, Assembly-CSharp
+        m_MethodName: Lock
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 342a6a46-84e6-464f-a0cc-b32eea3461b6
     m_ActionName: Combat/ToggleLock[/Mouse/middleButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359576524}
+        m_TargetAssemblyTypeName: LookController, Assembly-CSharp
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 457f34b1-363d-4c5a-a69b-06deb04fbb7f
     m_ActionName: Combat/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
@@ -1543,6 +1583,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ddb5f24a54e9147a64553184edbcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1359576522}
+  isLocked: 1
+  motionVectorDampener:
+    smoothTime: 0.33
+    clampMagnitude: 0
+--- !u!114 &1359576524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801079f303d118f4cbbe9945314d782b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookVector:
+    smoothTime: 0
+    clampMagnitude: 0
+  lookRig: {fileID: 1004206732}
+  sensitivity: 1
+  verticalRotationLimits: {x: -35, y: 35}
 --- !u!1 &1400666879
 GameObject:
   m_ObjectHideFlags: 0
