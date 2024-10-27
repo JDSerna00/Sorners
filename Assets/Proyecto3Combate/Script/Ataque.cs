@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using InClass;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -11,10 +13,15 @@ public class Ataque : MonoBehaviour
 {
 
     private Animator anim;
+    [SerializeField] private Character character;
     private int currentWeapon = 0;
     public GameObject Sword;
     public Material swordMaterial; 
     public float dissolveDuration = 1.0f; 
+    [SerializeField] private LayerMask detectionMask;
+    [SerializeField] private float detectionRadius;
+    public UnityEvent onLockTarget;
+    public UnityEvent onUnlockTarget;
 
     private void Awake()
     {
@@ -62,13 +69,13 @@ public class Ataque : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (currentWeapon == 0) // Cambiar de puños a espada
+            if (currentWeapon == 0) // Cambiar de puï¿½os a espada
             {
                 anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 1;
                 StartCoroutine(ActivateDissolveEffect(true));
             }
-            else // Cambiar de espada a puños
+            else // Cambiar de espada a puï¿½os
             {
                 anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 0;
@@ -118,6 +125,30 @@ public class Ataque : MonoBehaviour
         {
             Sword.SetActive(false);
         }
+    }
+
+     public void Lock(InputAction.CallbackContext ctx)
+    {
+        if (!gameObject.scene.IsValid()) return;
+        if (!ctx.performed) return;
+        if (character.State.IsLocked)
+        {
+            character.State.LockedTarget = null;
+            onUnlockTarget?.Invoke();
+            return;
+        }
+        Collider[] detectedColliders = Physics.OverlapSphere(transform.position, detectionRadius, detectionMask);
+        if (detectedColliders.Length == 0) return;
+        int bestFocusedTarget = 0;
+        var cameraManager = character.Player.GetComponent<PlayerCameraManager>();
+        for (int i = 0; i < detectedColliders.Length; i++)
+        {
+            float focusScore = cameraManager.GetFocusScore(detectedColliders[i].transform);
+            float currentBestScore = cameraManager.GetFocusScore(detectedColliders[bestFocusedTarget].transform);
+            if (1 - focusScore < 1 - currentBestScore) bestFocusedTarget = i;
+        }
+        character.State.LockedTarget = detectedColliders[bestFocusedTarget].transform;
+        onLockTarget?.Invoke();
     }
 
     

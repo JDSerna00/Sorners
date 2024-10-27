@@ -401,8 +401,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474009098}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.025215602, z: 0, w: 0.99968207}
-  m_LocalPosition: {x: 0.178, y: 1.629, z: -2.26}
+  m_LocalRotation: {x: 0.03207535, y: -0.025202617, z: 0.00080905657, w: 0.9991673}
+  m_LocalPosition: {x: 0.19, y: 1.629, z: -2.495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,14 +544,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817023468}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.025215602, z: -0, w: 0.99968207}
-  m_LocalPosition: {x: 0.178, y: 1.629, z: -2.26}
+  m_LocalRotation: {x: 0.03207535, y: -0.025202617, z: 0.00080905657, w: 0.9991673}
+  m_LocalPosition: {x: 0.19, y: 1.629, z: -2.495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1061040458}
   m_Father: {fileID: 1004206732}
-  m_LocalEulerAnglesHint: {x: 0, y: -2.89, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.677, y: -2.89, z: 0}
 --- !u!114 &817023470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,6 +1162,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1359576520}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f6781d24e21d0b4b96d4271e8644497,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1359576523}
   m_SourcePrefab: {fileID: 100100000, guid: 5f6781d24e21d0b4b96d4271e8644497, type: 3}
 --- !u!1 &1359576512 stripped
 GameObject:
@@ -1328,6 +1332,18 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3dd5e135-52bd-487a-9f3a-6e186550252e
     m_ActionName: Combat/ChangeWeapon[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 384a6395-8865-48f1-b2ab-cfbaf45253ed
+    m_ActionName: Combat/Dodge[/Keyboard/alt]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 342a6a46-84e6-464f-a0cc-b32eea3461b6
+    m_ActionName: Combat/ToggleLock[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 457f34b1-363d-4c5a-a69b-06deb04fbb7f
+    m_ActionName: Combat/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Combat
@@ -1351,9 +1367,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d389ea5fb64ed64b8655eee50cfb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1359576522}
   Sword: {fileID: 619205924}
   swordMaterial: {fileID: 2100000, guid: 894155dddafe9c045b66937f62d1815c, type: 2}
   dissolveDuration: 1
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  detectionRadius: 5
+  onLockTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1400666879}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1400666879}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1400666881}
+        m_TargetAssemblyTypeName: CombatCameraController, Assembly-CSharp
+        m_MethodName: ToggleLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUnlockTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1400666879}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1004206731}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!136 &1359576518
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1444,6 +1531,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ec51c2a11456b498422d6dba8cd2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1359576523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359576512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ddb5f24a54e9147a64553184edbcbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400666879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bca5d9d0d34d6b45902d293fc25f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1359576522}
 --- !u!1818360608 &1400666882
 PositionConstraint:
   m_ObjectHideFlags: 0
@@ -1520,6 +1620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965498399}
   - component: {fileID: 1965498400}
+  - component: {fileID: 1965498401}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -1582,6 +1683,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1004399190}
+--- !u!114 &1965498401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965498398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fda2308cdbf9504da8966f0c5ca910e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2132503135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 5f6781d24e21d0b4b96d4271e8644497,

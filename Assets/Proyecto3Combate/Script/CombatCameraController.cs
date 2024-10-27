@@ -1,18 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using InClass;
 using UnityEngine;
 
-public class CombatCameraController : MonoBehaviour
+public class CombatCameraController : GameSystem
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Character character;
+    private CombatVirtualCamera vCam;
+
+    protected override void Awake()
     {
-        
+        base.Awake();
+        vCam = GetSubSystem<CombatVirtualCamera>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleLock()
     {
-        
+        CharacterState state = character.State;
+        if (!state.IsLocked)
+        {
+            vCam.LockTarget(null);
+            return;
+        }
+        vCam.LockTarget(state.LockedTarget);
+    }
+
+    private void Update()
+    {
+        CharacterState state = character.State;
+        if (!state.IsLocked) return;
+        Vector3 forward = (Vector3.ProjectOnPlane(state.LockedTarget.position, Vector3.up) - transform.position).normalized;
+        Quaternion lookRot = Quaternion.LookRotation(forward, Vector3.up);
+        transform.rotation = lookRot;
     }
 }
