@@ -40,7 +40,10 @@ public class IKFootSolver : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        leftFootOffsetDampener.Update();
+        rightFootOffsetDampener.Update();
+        leftFootRotationDampener.Update();
+        rightFootRotationDampener.Update();
     }
 
     public override void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

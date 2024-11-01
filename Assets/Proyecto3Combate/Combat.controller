@@ -3018,13 +3018,13 @@ MonoBehaviour:
     m_Bits: 128
   extraHeight: 0.1
   leftFootOffsetDampener:
-    <SmoothingTime>k__BackingField: 0
+    <SmoothingTime>k__BackingField: 0.2
   rightFootOffsetDampener:
-    <SmoothingTime>k__BackingField: 0
+    <SmoothingTime>k__BackingField: 0.2
   leftFootRotationDampener:
-    <SmoothingSpeed>k__BackingField: 0
+    <SmoothingSpeed>k__BackingField: 10
   rightFootRotationDampener:
-    <SmoothingSpeed>k__BackingField: 0
+    <SmoothingSpeed>k__BackingField: 10
 --- !u!1102 &8700646197194965904
 AnimatorState:
   serializedVersion: 6
