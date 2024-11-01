@@ -290,7 +290,8 @@ AnimatorState:
   - {fileID: 1557719511830658838}
   - {fileID: 2971054907906892093}
   - {fileID: 8792362272327425937}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 8590038227972986513}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 1
   m_WriteDefaultValues: 1
@@ -1632,7 +1633,7 @@ AnimatorController:
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 0
-    m_IKPass: 0
+    m_IKPass: 1
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
 --- !u!1101 &438162950600598851
@@ -3000,6 +3001,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d52cbb9e76d9444a7fb802790c5215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8590038227972986513
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5212d9b2eff6b864a9876d5a239c0f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  extraHeight: 0.1
+  leftFootOffsetDampener:
+    <SmoothingTime>k__BackingField: 0
+  rightFootOffsetDampener:
+    <SmoothingTime>k__BackingField: 0
+  leftFootRotationDampener:
+    <SmoothingSpeed>k__BackingField: 0
+  rightFootRotationDampener:
+    <SmoothingSpeed>k__BackingField: 0
 --- !u!1102 &8700646197194965904
 AnimatorState:
   serializedVersion: 6
