@@ -15,28 +15,34 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCamera; 
     [SerializeField] Animator animator;
     [SerializeField] VectorDampener vectorDampener = new VectorDampener(true); 
+    [SerializeField] Transform cameraTransform; 
 
     public void Move(CallbackContext ctx)
     {
         Vector2 dir = ctx.ReadValue<Vector2>();
+         if(dir != Vector2.zero) 
+         {
+            animator.SetBool("IsMoving", true);
+         }
+        else 
+        {
+            animator.SetBool("IsMoving", false);
+        } 
         vectorDampener.TargetValue = dir;
-
-        Vector3 cameraForward = mainCamera.transform.forward;
-        Vector3 cameraRight = mainCamera.transform.right;
-
-        cameraForward.y = 0;
-        cameraRight.y = 0;
-        cameraForward.Normalize();
-        cameraRight.Normalize();
-
-        Vector3 moveDirection = (cameraForward * dir.y + cameraRight * dir.x).normalized;
-        Vector3 localMoveDirection = transform.InverseTransformDirection(moveDirection);
-
-        animator.SetFloat(velXId, localMoveDirection.x);
-        animator.SetFloat(velYId, localMoveDirection.z);
-        animator.SetBool("IsMoving", true);
         
     }
+
+    public void OnAnimatorMove()
+    {
+        float interpolator = Mathf.Abs(Vector3.Dot(cameraTransform.forward, transform.up)); 
+        Vector3 forward = Vector3.Lerp(cameraTransform.forward, cameraTransform.up, interpolator);
+        Vector3 projected = Vector3.ProjectOnPlane(forward, transform.up);
+        Quaternion rotation = Quaternion.LookRotation(projected, transform.up); 
+        animator.rootRotation = Quaternion.Slerp(animator.rootRotation, rotation, vectorDampener.CurrentValue.magnitude);
+        animator.ApplyBuiltinRootMotion();
+
+    }
+
     public void OnJump(CallbackContext ctx)
     {
         if (animator.GetBool("isJumping")) return;
