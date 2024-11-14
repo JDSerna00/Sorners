@@ -53,6 +53,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Dodge(CallbackContext ctx) {
+        if(ctx.performed){
+            animator.SetTrigger("Dodge");
+        }
+    }
+
     public void ToggleSprint(CallbackContext ctx)
     {
         bool value = ctx.ReadValueAsButton();

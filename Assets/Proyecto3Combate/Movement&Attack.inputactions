@@ -60,10 +60,19 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Look",
-                    "type": "PassThrough",
-                    "id": "75a0ba5c-dd30-4b4f-9dda-d15cf80907eb",
-                    "expectedControlType": "Vector2",
+                    "name": "Lock",
+                    "type": "Button",
+                    "id": "593feb9c-31db-48f5-8591-c3d717c40f8e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dodge",
+                    "type": "Button",
+                    "id": "5837f875-b304-41fd-a13b-7b03e5e12b43",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -182,12 +191,23 @@
                 },
                 {
                     "name": "",
-                    "id": "f8bc8e5b-f175-4b20-b164-c05145c0f349",
-                    "path": "<Mouse>/delta",
+                    "id": "57f8e7f3-73ab-4253-b28c-a697cca24e8a",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
+                    "action": "Lock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7719ad38-edbb-430b-be6f-bde32f656a9f",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dodge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
