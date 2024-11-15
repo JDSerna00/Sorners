@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6971f80438191eb4c9a6d0838c6204eb
+guid: 1e8a802603398e945baf3936ec8f5b4c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -17,14 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
-      : position error = 64.827576 mm\n\t'mixamorig:LeftLeg' : position error = 59.764301
-      mm\n\t'mixamorig:LeftFoot' : position error = 140.563202 mm\n\t'mixamorig:LeftToeBase'
-      : position error = 22.515684 mm\n\t'mixamorig:RightUpLeg' : position error
-      = 64.827583 mm\n\t'mixamorig:RightLeg' : position error = 59.767582 mm\n\t'mixamorig:RightFoot'
-      : position error = 140.563202 mm\n\t'mixamorig:RightToeBase' : position error
-      = 22.515696 mm\n"
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -40,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack
+      name: Die
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 80
+      lastFrame: 89
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -56,38 +49,14 @@ ModelImporter:
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.9007575
-        functionName: ResetAttack
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 6bb3e0ccb2051ab46a224ac32ede6213,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.42522883
-        functionName: ToggleDamageDetector
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7e779c02dfda60540b5bae86cd4d9d53,
-          type: 3}
-        floatParameter: 0.5
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.55812824
-        functionName: ToggleDamageDetector
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 7e779c02dfda60540b5bae86cd4d9d53,
-          type: 3}
-        floatParameter: 0.5
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

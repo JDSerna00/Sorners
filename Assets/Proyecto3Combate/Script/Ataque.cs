@@ -12,7 +12,10 @@ public class Ataque : MonoBehaviour
 
     private Animator anim;
     private int currentWeapon = 0;
-    public GameObject Sword;
+    [SerializeField] private GameObject Sword;
+    [SerializeField] private WeaponDamager swordWeapon; 
+    [SerializeField] private WeaponDamager punchWeapon; 
+    private WeaponDamager currentDamager; 
     public Material swordMaterial; 
     public float dissolveDuration = 1.0f; 
 
@@ -22,6 +25,7 @@ public class Ataque : MonoBehaviour
         anim.SetBool("canAttack", true);
         anim.SetInteger("WeaponType", currentWeapon);
         UpdateWeaponVisibility();
+        currentDamager = punchWeapon; 
     }
 
     public void LightAttack(InputAction.CallbackContext ctx)
@@ -62,17 +66,19 @@ public class Ataque : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (currentWeapon == 0) // Cambiar de puños a espada
+            if (currentWeapon == 0) // Cambiar de puï¿½os a espada
             {
                 anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 1;
                 StartCoroutine(ActivateDissolveEffect(true));
+                
             }
-            else // Cambiar de espada a puños
+            else // Cambiar de espada a puï¿½os
             {
                 anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 0;
                 StartCoroutine(ActivateDissolveEffect(false));
+                currentDamager = punchWeapon; 
             }
 
             anim.SetInteger("WeaponType", currentWeapon);
@@ -95,6 +101,10 @@ public class Ataque : MonoBehaviour
             Sword.SetActive(false);
         }
 
+    }
+    public void ToggleDamageDetector(float motionValue)
+    {
+        currentDamager.Toggle(motionValue);
     }
 
     private IEnumerator ActivateDissolveEffect(bool appearing)
@@ -119,6 +129,4 @@ public class Ataque : MonoBehaviour
             Sword.SetActive(false);
         }
     }
-
-    
 }
