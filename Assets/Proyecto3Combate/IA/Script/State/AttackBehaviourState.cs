@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackBehaviourState : MonoBehaviour//IStateBehavior
+public class AttackBehaviourState : IStateBehavior
 {
     private PatrolCharacterAIContext context;
     
