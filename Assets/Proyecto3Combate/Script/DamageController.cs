@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Animator))]
 public class DamageController : MonoBehaviour, IDamageReceiver
@@ -18,7 +19,7 @@ public class DamageController : MonoBehaviour, IDamageReceiver
     public void ReceiveDamage(IDamageSender perpetrator, DamagePayload payload)
     {
         bool isAlive = GetComponent<CharacterState>().UpdateHealth(-payload.damage);
-        Debug.Log("is alive = " + isAlive);
+        //Debug.Log("is alive = " + isAlive);
         Vector3 damageDirection = transform.InverseTransformPoint(payload.position).normalized;
         if (isAlive)
         {
@@ -33,10 +34,16 @@ public class DamageController : MonoBehaviour, IDamageReceiver
                 anim.SetFloat("DamageY", damageDirection.z * (float)payload.severity);
             }
             anim.SetTrigger("Damaged");
+            if(GetComponent<PlayerInput>() != null)
+                anim.SetBool("canAttack", true);
         }
         else
         {
             anim.SetTrigger("Die");
+            if(TryGetComponent<SimplePatrolAndAttackStateMachine>(out SimplePatrolAndAttackStateMachine ZombieAI)){
+                ZombieAI.enabled = false;
+                GetComponent<Collider>().enabled = false;
+            }
         }
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(PlayerInput))]
 
 public class Ataque : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class Ataque : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (currentWeapon == 0) // Cambiar de pu�os a espada
+            if (currentWeapon == 0) // Cambiar de punch a espada
             {
                 anim.SetTrigger("ChangeWeapon"); 
                 currentWeapon = 1;
@@ -105,6 +106,11 @@ public class Ataque : MonoBehaviour
     public void ToggleDamageDetector(float motionValue)
     {
         currentDamager.Toggle(motionValue);
+    }
+
+    public void UnBugCollider(){
+        swordWeapon.AntiBug_Collider();
+        punchWeapon.AntiBug_Collider();
     }
 
     private IEnumerator ActivateDissolveEffect(bool appearing)

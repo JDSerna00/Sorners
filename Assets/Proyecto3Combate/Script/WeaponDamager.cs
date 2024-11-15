@@ -20,11 +20,9 @@ public class WeaponDamager : MonoBehaviour, IDamageSender
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.TryGetComponent(out IDamageReceiver target) && target.Faction != Faction) //!hitReceivers.Contains(target))
         {
             hitReceivers.Add(target);
-            Debug.Log("ola");
             SendDamage(target);
         }
     }
@@ -36,4 +34,10 @@ public class WeaponDamager : MonoBehaviour, IDamageSender
         col.enabled = !col.enabled;
         this.multiplier = multiplier;
     }
-} 
+
+    public void AntiBug_Collider(){
+        Collider col = GetComponent<Collider>();
+        col.enabled = false;
+    }
+    
+}

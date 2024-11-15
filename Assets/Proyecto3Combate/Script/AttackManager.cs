@@ -15,12 +15,19 @@ public class AttackManager : MonoBehaviour
 
     public void Attack()
     {
-        if (GetComponent<PlayerState>().UpdateStamina(-25)) return;
-        anim.SetTrigger("Attack");
+        if (anim.GetBool("canAttack"))
+        {
+            if(GetComponent<PlayerState>().UpdateStamina(-25)) return;
+            anim.SetTrigger("Attack");
+        }
     }
 
     public void ToggleDamageDetector(float motionValue)
     {
         weaponDamager.Toggle(motionValue);
+    }
+
+    public void UnBugCollider(){
+        weaponDamager.AntiBug_Collider();
     }
 }

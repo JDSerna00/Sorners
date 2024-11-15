@@ -27,6 +27,7 @@ public class CharacterState : MonoBehaviour
 
     public bool UpdateStamina(float staminaDelta)
     {
+        if(GetComponent<RootMotionNavigation>() != null) return false;
         if (stamina >= Mathf.Abs(staminaDelta))
         {
             stamina += staminaDelta;
@@ -38,13 +39,12 @@ public class CharacterState : MonoBehaviour
 
     public bool UpdateHealth(float healthDelta)
     {
-        if (currentHealth >= healthDelta* - 1)
+        if (currentHealth >= healthDelta)
         {
             currentHealth += healthDelta;
             return true;
         }
-        //Morir
-        Debug.Log($"Character ({gameObject.name} is dead");
+
         return false;
     }
 
