@@ -49,4 +49,6 @@ public class CharacterState : MonoBehaviour
     }
 
     public float Stamina => stamina;
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
 }
