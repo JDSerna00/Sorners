@@ -8,6 +8,8 @@ public class DamageController : MonoBehaviour, IDamageReceiver
 {
     private Animator anim;
 
+    [SerializeField] private int faction;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -15,7 +17,8 @@ public class DamageController : MonoBehaviour, IDamageReceiver
 
     public void ReceiveDamage(IDamageSender perpetrator, DamagePayload payload)
     {
-        bool isAlive = GetComponent<CharacterState>().UpdateHealth(payload.damage);
+        bool isAlive = GetComponent<CharacterState>().UpdateHealth(-payload.damage);
+        Debug.Log("is alive = " + isAlive);
         Vector3 damageDirection = transform.InverseTransformPoint(payload.position).normalized;
         if (isAlive)
         {
@@ -37,6 +40,6 @@ public class DamageController : MonoBehaviour, IDamageReceiver
         }
     }
 
-    public int Faction => 0;
+    public int Faction => faction;
 }
 

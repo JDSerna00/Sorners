@@ -11,7 +11,7 @@ public class CharacterState : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
 
     [SerializeField] private float stamina;
-    private float currentHealth;
+    [SerializeField] private float currentHealth;
 
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class CharacterState : MonoBehaviour
 
     public bool UpdateHealth(float healthDelta)
     {
-        if (currentHealth >= healthDelta)
+        if (currentHealth >= healthDelta* - 1)
         {
             currentHealth += healthDelta;
             return true;

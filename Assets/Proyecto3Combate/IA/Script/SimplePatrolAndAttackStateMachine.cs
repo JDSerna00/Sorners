@@ -80,16 +80,22 @@ public class SimplePatrolAndAttackStateMachine : MonoBehaviour
 
     private void Attack()
     {
-        if (context.animator.GetFloat("ActiveAttack") < 0.2f)
+        if (context.animator.GetBool("canAttack"))
         {
             context.attackTimer += Time.deltaTime;
             if (context.attackTimer >= context.currentAttackDelay)
             {
                 context.animator.SetTrigger("Attack");
+                context.animator.SetBool("canAttack", false);
                 context.attackTimer = 0;
                 context.currentAttackDelay = Random.Range(context.attackDelayMin, context.attackDelayMax);
             }
         }
+    }
+
+    public void ResetAttack()
+    {
+         context.animator.SetBool("canAttack", true);
     }
 
     private void DetectEnemies()
@@ -164,5 +170,4 @@ public class SimplePatrolAndAttackStateMachine : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, enemyDetectionRadius);
     }
 #endif
-
 }
