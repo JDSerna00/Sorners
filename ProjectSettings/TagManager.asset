@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - EnemiesTXT
+  - HealthBar
+  - Pause
+  - Instructions
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - Building
   - Ground
   - Player
-  - 
+  - Muro
   - 
   - 
   - 

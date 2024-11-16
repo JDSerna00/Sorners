@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterState : MonoBehaviour
 {
@@ -42,6 +43,10 @@ public class CharacterState : MonoBehaviour
         if (currentHealth >= healthDelta)
         {
             currentHealth += healthDelta;
+            if(GetComponent<PlayerInput>() != null)
+            {
+                UIManager.Instance.UpdateHealth(currentHealth); 
+            }
             return true;
         }
 

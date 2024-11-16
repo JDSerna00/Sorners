@@ -40,9 +40,17 @@ public class DamageController : MonoBehaviour, IDamageReceiver
         else
         {
             anim.SetTrigger("Die");
-            if(TryGetComponent<SimplePatrolAndAttackStateMachine>(out SimplePatrolAndAttackStateMachine ZombieAI)){
-                ZombieAI.enabled = false;
+            if(TryGetComponent<PlayerInput>(out PlayerInput input)){
+                UIManager.Instance.Lose();
+                input.enabled = false;
+                GetComponent<PlayerMovement>().enabled = false;
+            }
+            //if(TryGetComponent<PlayerInput>(out PlayerInput myInput)) myInput.enabled = false;
+            if(TryGetComponent<SimplePatrolAndAttackStateMachine>(out SimplePatrolAndAttackStateMachine mutantAI)){
+                mutantAI.enabled = false;
+                UIManager.Instance.UpdateEnemyCount();
                 GetComponent<Collider>().enabled = false;
+                SendMessage("UnBugCollider");
             }
         }
     }

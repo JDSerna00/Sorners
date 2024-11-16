@@ -79,4 +79,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat(velXId, dir.x);
         animator.SetFloat(velYId, dir.y);
     }
+
+    public void Pausa(CallbackContext ctx)
+    {
+        if(ctx.performed)
+        {
+            UIManager.Instance.Pause(); 
+        }
+    }
 }
