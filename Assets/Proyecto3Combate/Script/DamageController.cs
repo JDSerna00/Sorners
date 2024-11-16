@@ -21,6 +21,7 @@ public class DamageController : MonoBehaviour, IDamageReceiver
         bool isAlive = GetComponent<CharacterState>().UpdateHealth(-payload.damage);
         //Debug.Log("is alive = " + isAlive);
         Vector3 damageDirection = transform.InverseTransformPoint(payload.position).normalized;
+        SendMessage("UnBugCollider");
         if (isAlive)
         {
             if (Mathf.Abs(damageDirection.x) >= Mathf.Abs(damageDirection.z))
