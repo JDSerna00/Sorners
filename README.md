@@ -44,4 +44,4 @@ https://github.com/user-attachments/assets/8aa0cba3-8d0b-4435-9683-4dbadc39a54b
 
 
 ### Entrega final Demo 
-[![YAPYAP](https://img.youtube.com/vi/ofJVVUAUFLM)](https://www.youtube.com/watch?v=ofJVVUAUFLM)
+[![YAPYAP](https://img.youtube.com/vi/ofJVVUAUFLM/0.jpg)](https://www.youtube.com/watch?v=ofJVVUAUFLM)
